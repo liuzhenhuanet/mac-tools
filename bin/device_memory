@@ -1,0 +1,2 @@
+echo “adb shell dumpsys meminfo -s pid/packageName”
+adb shell dumpsys meminfo -s com.yuantiku.tutor

@@ -1,0 +1,35 @@
+echo 本机地址：
+getip
+echo "  "
+target=.
+if [ -n "$1" ];then
+target=$1
+fi
+
+# find a free port
+port=5000
+while true
+do
+if [ -z "`lsof -i:${port}`" ];then
+echo use port: ${port}
+break
+else
+let port+=1
+fi
+done
+
+# find directory
+file=""
+if [ -f "$target" ];then
+file=`basename $target`
+target=`dirname $target`
+fi 
+
+getip | while read line
+do
+echo -----------------------------------
+echo http://${line}:${port}/${file}
+qrencode http://${line}:${port}/${file} -o - -t UTF8 
+done
+echo -----------------------------------
+php -S 0.0.0.0:${port} -t $target

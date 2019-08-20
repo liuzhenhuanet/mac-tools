@@ -1,0 +1,1 @@
+ adb shell "ls /sdcard/Android/data/com.yuantiku.tutor/cache/webapp/"adb shell ls `$device_webapp_dir`

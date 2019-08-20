@@ -1,0 +1,2 @@
+echo $device_webapp_dir|pbcopy
+echo copy success: $device_webapp_dir

@@ -1,0 +1,2 @@
+# 获取android设备ip地址
+adb shell ip a | grep inet | grep -v inet6 | grep -v 127 | sed 's/^[ \t]*//g' | cut -d ' ' -f2

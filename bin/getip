@@ -1,0 +1,2 @@
+# 获取本地ip地址
+ifconfig | grep inet | grep -v inet6 | grep -v 127 | cut -d ' ' -f2
