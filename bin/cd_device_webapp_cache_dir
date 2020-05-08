@@ -1,2 +1,2 @@
-echo $device_webapp_dir|pbcopy
+copy_device_webapp_dir_path
 adb shell

@@ -1,1 +1,1 @@
-adb push $1 /sdcard/Android/data/com.yuantiku.tutor/cache/webapp/$2
+adb push $1 $device_webapp_dir/$2
