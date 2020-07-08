@@ -6,3 +6,9 @@ export PATH=$TOOL_HOME/local/bin:$TOOL_HOME/bin:$TOOL_HOME/open-applications:$PA
 
 export device_webapp_dir=/sdcard/Android/data/com.yuantiku.tutor/files/webapp
 
+# proxy list
+alias proxy='export all_proxy=socks5://127.0.0.1:1080;curl cip.cc'
+alias unproxy='unset all_proxy;curl cip.cc'
+
+# 快捷命令
+alias typora="open -a typora" # 支持命令行打开typora，或在命令行中使用typora打点文件
